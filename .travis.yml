@@ -89,10 +89,9 @@ jobs:
         - gitbook build
         - for i in 1 2 3 4; do gitbook pdf ./ _book/clover.pdf && break || sleep 1; done
         - ls -lah _book/clover*.pdf
-        - sudo apt-get install ghostscript
-        - pdf2ps _book/clover_ru.pdf clover_ru.ps && ps2pdf clover_ru.ps _book/clover_ru.pdf
-        - pdf2ps _book/clover_en.pdf clover_en.ps && ps2pdf clover_en.ps _book/clover_en.pdf
-        - ls -lah _book/clover*.pdf
+        - zip -9 _book/clover_ru.pdf.zip _book/clover_ru.pdf && rm _book/clover_ru.pdf
+        - zip -9 _book/clover_en.pdf.zip _book/clover_en.pdf && rm _book/clover_en.pdf
+        - ls -lah _book/clover*.pdf.zip
       deploy:
         provider: pages
         local_dir: _book
