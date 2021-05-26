@@ -40,6 +40,13 @@
   <depend>tf2_web_republisher</depend>
   <depend>python-lxml</depend>
   <test_depend>ros_pytest</test_depend>
+  <exec_depend>aruco_pose</exec_depend>
+  <exec_depend>clover_blocks</exec_depend>
+  <exec_depend>clover_description</exec_depend>
+  <exec_depend>clover_simulation</exec_depend>
+  <exec_depend>roswww_static</exec_depend>
+  <exec_depend>ws281x</exec_depend>
+  <exec_depend>vl53l1x</exec_depend>
   <!-- <exec_depend>python-pymavlink</exec_depend> -->
   <!-- Use test_depend for packages you need only for testing: -->
   <!--   <test_depend>gtest</test_depend> -->
